@@ -45,10 +45,14 @@ Create and edit ~/.drirc:
 - Find the line that starts with `linux` , and add the following at the end of that line:
   `i915.enable_rc6=0`
 - Press F10 (with Fn key)
+- I had two kernels and only it worked with `rinux-image-5.4.0-51-generic (recovery)` 
 
 
-
-
+## Useful commands
+- See a list of intalled kernels
+`dpkg --get-selections | grep linux-image`
+- See the running kernel
+`uname --all`
 
 
 
