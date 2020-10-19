@@ -53,6 +53,7 @@ Create and edit ~/.drirc:
 `dpkg --get-selections | grep linux-image`
 - See the running kernel
 `uname --all`
+- This gives some customization `sudo apt install grub-customizer`
 
 
 
