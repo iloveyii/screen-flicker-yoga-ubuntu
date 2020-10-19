@@ -42,8 +42,9 @@ Create and edit ~/.drirc:
 - Press escape as soon as Ubuntu starts to goto startup menu
 - Choose Ubuntu Advanced Options and press enter
 - Choose the kernel at top and press `e`
-- Find the line that starts `linux` , and add the following at the end of that line:
+- Find the line that starts with `linux` , and add the following at the end of that line:
   `i915.enable_rc6=0`
+- Press F10 (with Fn key)
 
 
 
