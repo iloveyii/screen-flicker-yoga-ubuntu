@@ -56,7 +56,7 @@ Create and edit ~/.drirc:
 - This gives some customization `sudo apt install grub-customizer`
 
 
-## Upgrade kernel to latest
+## 3 - Upgrade kernel to latest
    - `sudo apt-add-repository -y ppa:cappelikan/ppa`
    - `sudo apt update`
    - `sudo apt install mainline`
