@@ -3,7 +3,7 @@
 The screen start flickering as soon as you install and start OS.
 
 
-## Solution 
+## 1 - Solution 
 
 I first followed the following :
 
@@ -38,7 +38,7 @@ Create and edit ~/.drirc:
 ### But the above did not work
 
 
-## Solution - worked
+## 2- Solution - worked
 - Press escape as soon as Ubuntu starts to goto startup menu
 - Choose Ubuntu Advanced Options and press enter
 - Choose the kernel at top and press `e`
@@ -48,7 +48,7 @@ Create and edit ~/.drirc:
 - I had two kernels and only it worked with `rinux-image-5.4.0-51-generic (recovery)` 
 
 
-## Useful commands
+### Useful commands
 - See a list of intalled kernels
 `dpkg --get-selections | grep linux-image`
 - See the running kernel
@@ -56,6 +56,18 @@ Create and edit ~/.drirc:
 - This gives some customization `sudo apt install grub-customizer`
 
 
+## Upgrade kernel to latest
+   - `sudo apt-add-repository -y ppa:cappelikan/ppa`
+   - `sudo apt update`
+   - `sudo apt install mainline`
+   - Launch mainline and install the version from the list
+   
+### Set default kernel version
+   - Find grub location `export GRUB_CONFIG=sudo find /boot -name "grub.cfg"`
+   - `sudo grep 'menuentry ' $GRUB_CONFIG | cut -f 2 -d "'" | nl -v 0`
+   - `sudo nano /etc/default/grub` and set `GRUB_DEFAULT=1`
+   - `sudo update-grub`
+   - Reboot and repeat step 2 above to remove flicker
 
 
 
