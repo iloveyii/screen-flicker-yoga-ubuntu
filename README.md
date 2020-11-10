@@ -63,7 +63,7 @@ Create and edit ~/.drirc:
    - Launch mainline and install the version from the list
    
 ### Set default kernel version
-   - Find grub location `export GRUB_CONFIG=sudo find /boot -name "grub.cfg"`
+   - Find grub location `export GRUB_CONFIG='sudo find /boot -name "grub.cfg" '`
    - `sudo grep 'menuentry ' $GRUB_CONFIG | cut -f 2 -d "'" | nl -v 0`
    - `sudo nano /etc/default/grub` and set `GRUB_DEFAULT=1`
    - `sudo update-grub`
